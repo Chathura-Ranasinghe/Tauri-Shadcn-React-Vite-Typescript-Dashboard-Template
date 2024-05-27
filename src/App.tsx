@@ -2,24 +2,16 @@ import "./App.css";
 
 import { ThemeProvider } from "@/components/theme-provider"
 import Dashboard from "./components/Dashboard";
-import Sidebar from "./components/Sidebar";
-import Menubar from "./components/Menubar";
+import { Sidebar } from "./components/Sidebar";
+
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex flex-col h-screen">
-        <div className="h-8 w-full">
-          <Menubar />
-        </div>
-        <div className="flex flex-1">
-          <div className="w-28">
-            <Sidebar />
-          </div>
-          <div className="flex-1">
-            <Dashboard />
-          </div>
-        </div>
+      <div className="flex h-screen select-none">
+        <Sidebar/>
+        <Dashboard />
       </div>
     </ThemeProvider>
   );
