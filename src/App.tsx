@@ -1,8 +1,8 @@
 import "./App.css";
 
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme/theme-provider"
 import Dashboard from "./components/Dashboard";
-import { Sidebar } from "./components/Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 
 document.addEventListener('contextmenu', event => event.preventDefault());
 

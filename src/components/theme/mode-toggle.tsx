@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip"
 
 
-import { useTheme } from "@/components/theme-provider"
+import { useTheme } from "@/components/theme/theme-provider"
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
