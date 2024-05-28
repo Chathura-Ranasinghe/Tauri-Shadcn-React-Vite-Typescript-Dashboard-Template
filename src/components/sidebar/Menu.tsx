@@ -23,7 +23,7 @@ const Menu = ({ isOpen }: MenuProps) => {
   const menuList = getMenuList(pathname);
 
   return (
-      <nav className="mt-5 px-3 h-full w-full">
+      <nav className="mt-8 px-3 h-full w-full">
         <ul className="flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] items-start space-y-1 px-2">
           {menuList.map(({ groupLabel, menus }, index) => (
             <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>

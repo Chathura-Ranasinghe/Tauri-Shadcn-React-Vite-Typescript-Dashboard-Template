@@ -1,7 +1,11 @@
+import Footer from "./Footer"
+import Navbar from "./Navbar"
+
 const Dashboard = () => {
   return (
     <div className="h-full w-full bg-secondary">
-        Dashboard
+        <Navbar/>
+        <Footer/>
     </div>
   )
 }

@@ -6,10 +6,9 @@ import { Button } from "@/components/ui/button";
 import { useSidebarToggle } from "@/hooks/useSidebarToggle";
 
 import SidebarToggle from "./SidebarToggle";
-import Menu from "./Menu";
+import Menu from "../sidebar/Menu";
 
 import { Zap } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const Sidebar = () => {
   const sidebar = useStore(useSidebarToggle, (state) => state);
@@ -24,10 +23,10 @@ const Sidebar = () => {
       )}
     >
       <SidebarToggle isOpen={sidebar?.isOpen} setIsOpen={sidebar?.setIsOpen} />
-      <div className="relative h-full flex flex-col py-4 overflow-y-auto">
+      <div className="relative h-full flex flex-col overflow-y-auto no-scrollbar overflow-auto">
         <div
           className={cn(
-            "px-3 flex transition-transform ease-in-out items-center  duration-300",
+            "flex transition-transform ease-in-out items-center px-3 py-4 duration-300",
             sidebar?.isOpen === false ? "translate-x-0" : "translate-x-0"
           )}
         >
@@ -45,7 +44,6 @@ const Sidebar = () => {
           DetectX
           </h1>
         </div>
-        <Separator className="mt-3"/>
         <Menu isOpen={sidebar?.isOpen} />
       </div>
     </aside>
