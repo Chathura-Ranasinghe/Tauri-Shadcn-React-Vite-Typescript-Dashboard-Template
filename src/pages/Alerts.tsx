@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 
-const Dashboard = () => {
+const Alerts = () => {
   return (
     <div className="flex w-full text-center bg-primary-foreground justify-center items-center rounded-lg">
       <div>
@@ -20,4 +20,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Alerts

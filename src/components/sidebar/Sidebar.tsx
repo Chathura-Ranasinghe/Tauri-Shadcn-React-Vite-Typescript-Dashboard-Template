@@ -18,7 +18,7 @@ const Sidebar = () => {
   return (
     <aside
       className={cn(
-        "z-20 h-screen -translate-x-0 transition-[width] ease-in-out duration-300",
+        "z-30 h-screen -translate-x-0 transition-[width] ease-in-out duration-300",
         sidebar?.isOpen === false ? "w-[90px]" : "w-72"
       )}
     >
@@ -26,12 +26,12 @@ const Sidebar = () => {
       <div className="relative h-full flex flex-col overflow-y-auto no-scrollbar overflow-auto">
         <div
           className={cn(
-            "flex transition-transform ease-in-out items-center px-3 py-4 duration-300",
-            sidebar?.isOpen === false ? "translate-x-0" : "translate-x-0"
+            "flex transition-transform ease-in-out items-center justify-center px-3 py-4 duration-300",
+            sidebar?.isOpen === false ? "translate-x-0" : "-translate-x-5"
           )}
         >
-          <Button variant="ghost" className="ml-1">
-          <Zap  fill="#3e9392" strokeWidth={0} />
+          <Button variant="link" className=" px-3">
+            <Zap  fill="#3e9392" strokeWidth={0} />
           </Button>
           <h1
             className={cn(

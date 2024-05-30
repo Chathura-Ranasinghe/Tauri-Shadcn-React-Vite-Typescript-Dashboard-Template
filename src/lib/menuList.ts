@@ -1,24 +1,16 @@
 import {
-  Tag,
-  Users,
+  Home,
+  Cctv,
+  FileClock,
   Settings,
-  Bookmark,
-  SquarePen,
-  LayoutGrid
+  LayoutDashboard 
 } from "lucide-react";
-
-type Submenu = {
-  href: string;
-  label: string;
-  active: boolean;
-};
 
 type Menu = {
   href: string;
   label: string;
   active: boolean;
   icon: any;
-  submenus: Submenu[];
 };
 
 type Group = {
@@ -35,45 +27,24 @@ export function getMenuList(pathname: string): Group[] {
           href: "/dashboard",
           label: "Dashboard",
           active: pathname.includes("/dashboard"),
-          icon: LayoutGrid,
-          submenus: []
+          icon: Home
         }
       ]
     },
     {
-      groupLabel: "Contents",
+      groupLabel: "Library",
       menus: [
         {
-          href: "",
-          label: "Posts",
-          active: pathname.includes("/posts"),
-          icon: SquarePen,
-          submenus: [
-            {
-              href: "/posts",
-              label: "All Posts",
-              active: pathname === "/posts"
-            },
-            {
-              href: "/posts/new",
-              label: "New Post",
-              active: pathname === "/posts/new"
-            }
-          ]
+          href: "./records",
+          label: "Records",
+          active: pathname.includes("/records"),
+          icon: Cctv,
         },
         {
-          href: "/categories",
-          label: "Categories",
-          active: pathname.includes("/categories"),
-          icon: Bookmark,
-          submenus: []
-        },
-        {
-          href: "/tags",
-          label: "Tags",
-          active: pathname.includes("/tags"),
-          icon: Tag,
-          submenus: []
+          href: "./alerts",
+          label: "Alerts",
+          active: pathname.includes("/alerts"),
+          icon: FileClock ,
         }
       ]
     },
@@ -81,18 +52,16 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Settings",
       menus: [
         {
-          href: "/users",
-          label: "Users",
-          active: pathname.includes("/users"),
-          icon: Users,
-          submenus: []
+          href: "/layout",
+          label: "Layout",
+          active: pathname.includes("/layout"),
+          icon: LayoutDashboard 
         },
         {
           href: "/account",
           label: "Account",
           active: pathname.includes("/account"),
-          icon: Settings,
-          submenus: []
+          icon: Settings
         }
       ]
     }
