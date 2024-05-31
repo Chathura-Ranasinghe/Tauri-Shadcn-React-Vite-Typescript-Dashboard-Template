@@ -6,7 +6,7 @@ import { Accountcrumbs, Alertscrumbs, DashBoardcrumbs, Layoutcrumbs, Recordscrum
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-10 w-full">
+    <header className="flex flex-col z-10 w-full">
       <div className="mx-4 sm:mx-8 flex h-14 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0">
         <Routes>

@@ -23,7 +23,7 @@ function App() {
           <Sidebar/>
           <div className='flex flex-col min-h-screen w-full'>
             <Navbar/>
-            <div className='flex flex-grow pr-8 pb-8'>
+            <div className='flex flex-grow'>
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" />} />
               <Route path="/dashboard" element={<Dashboard/>} />
