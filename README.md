@@ -1,7 +1,3 @@
-Got it! Here's an even shorter version:
-
----
-
 # Dashboard Template
 
 A modern dashboard template using Tauri, Shadcn, React-Vite, and TypeScript.
@@ -46,9 +42,3 @@ A modern dashboard template using Tauri, Shadcn, React-Vite, and TypeScript.
 - `yarn build` / `npm run build`: Build for production.
 - `yarn tauri dev` / `npm run tauri dev`: Run Tauri in development.
 - `yarn tauri build` / `npm run tauri build`: Build Tauri for production.
-
-## License
-
-MIT License.
-
----
